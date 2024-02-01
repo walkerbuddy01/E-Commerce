@@ -85,13 +85,14 @@ body {
 
 nav {
     display: flex;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(8px);
+    /* background: rgba(255, 255, 255, 0.35); */
+    /* backdrop-filter: blur(8px); */
     height: 60px;
     width: 100%;
     margin-top: 1.2vh;
     justify-content: space-between;
     align-items: center;
+    padding: 0 15px;
 }
 nav h1{
     font-family: monument;
@@ -108,17 +109,18 @@ nav .search-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: red;
+    /* background: red; */
 
 }
 
 nav .search-section input {
 
     width: 100%;
-    height: 60%;
+    height: 70%;
     border-style: none;
     text-align: end;
-    border-radius: 4vw;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 nav .search-section input:focus{
@@ -127,8 +129,13 @@ nav .search-section input:focus{
 
 nav .search-section i {
     padding: 0 1vw;
-    font-size: 25px;
-
+    font-size: 21px;
+    background: rgb(255, 255, 255);
+    height: 70%;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .sign-up_log-in{
     height: 100%;
@@ -136,26 +143,54 @@ nav .search-section i {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: red;
+    /* background: red; */
 }
 
 .sign-up_log-in button {
-    height: 80%;
-    width: 90%;
+    height: 60%;
+    width: 80%;
     border-radius: 4vw;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    background-color: rgb(21, 0, 255);
+    background-color: rgb(83, 189, 250);
     color: whitesmoke;
     border-style: none;
     text-align: center;
+    text-transform: uppercase;
 }
-
+.cart-section{
+    height: 80%;
+    width: 8%;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgb(40, 40, 40);
+    border-radius: 40px;
+}
 .cart-section i {
     font-size: 35px;
     padding-right: 1.4vw;
+    position: relative;
+    color: rgb(40, 40, 40);
+}
+.cart-section i::after{
+    content: "$";
+    position: absolute;
+    top: 0;
+    right: 15px;
+    height: 45%;
+    width: 15px;
+    font-size: 10px;
+    background: orange;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: Gilroy;
 }
 
 .navbar-2{
@@ -175,7 +210,6 @@ nav .search-section i {
 .hero-section {
     height: 70%;
     width: 100%;
-    background: rgba(255, 255, 255, 0.35);
     display: flex;
 }
 .hero-section-left{
@@ -193,9 +227,11 @@ nav .search-section i {
     border-radius: 10px;
 }
 .hero-section-right{
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 30%;
-    /* background: yellow; */
+    gap: 10px;
     margin-right: 0.7vw;
 }
 .hero-section-right-1{
@@ -207,6 +243,8 @@ nav .search-section i {
 .hero-section-right-2{
     display: flex;
     height: 50%;
+    width: 100%;
+    gap: 10px;
 }
 .hero-section-right-3{
     height: 100%;
@@ -223,7 +261,7 @@ nav .search-section i {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /* object-position: top; */
+    object-position: center;
     border-radius: 10px;
 }
 .hero-section-right-3 img{
