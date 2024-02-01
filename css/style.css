@@ -195,13 +195,13 @@ nav .search-section i {
 .hero-section-right{
     height: 100%;
     width: 30%;
-    background: yellow;
+    /* background: yellow; */
     margin-right: 0.7vw;
 }
 .hero-section-right-1{
     height: 50%;
     width: 100%;
-    background: blue;
+    /* background: blue; */
    
 }
 .hero-section-right-2{
@@ -211,11 +211,32 @@ nav .search-section i {
 .hero-section-right-3{
     height: 100%;
     width: 50%;
-    background: purple;
+    /* background: purple; */
    
 }
 .hero-section-right-4{
     height: 100%;
     width: 50%;
-    background: green;
+    /* background: green; */
+}
+.hero-section-right-1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* object-position: top; */
+    border-radius: 10px;
+}
+.hero-section-right-3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+}
+.hero-section-right-4 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
 }
