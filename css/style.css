@@ -373,6 +373,10 @@ nav .ri-menu-3-line{
         width: 15px;
     }
 
+.hero-section {
+    flex-direction: column;
+}
+
 
 }
 
