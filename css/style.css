@@ -1,5 +1,5 @@
-:root{
-     --main-background :  rgb(206, 206, 206);
+:root {
+    --main-background: rgb(206, 206, 206);
 }
 
 @font-face {
@@ -88,32 +88,56 @@
     width: 50px;
     aspect-ratio: 1.154;
     position: relative;
-    background: conic-gradient(from 120deg at 50% 64%,#0000, #25b09b 1deg 120deg,#0000 121deg);
-    animation: l27-0 1.5s infinite cubic-bezier(0.3,1,0,1);
+    background: conic-gradient(from 120deg at 50% 64%, #0000, #25b09b 1deg 120deg, #0000 121deg);
+    animation: l27-0 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
     margin: auto;
-  }
-  .loader:before,
-  .loader:after {
-    content:'';
+}
+
+.loader:before,
+.loader:after {
+    content: '';
     position: absolute;
-    inset:0;
-    background:inherit;
+    inset: 0;
+    background: inherit;
     transform-origin: 50% 66%;
     animation: l27-1 1.5s infinite;
-  }
-  .loader:after {
-    --s:-1;
-  }
-  @keyframes l27-0 {
-     0%,30%      {transform: rotate(0)}
-     70%         {transform: rotate(120deg)}
-     70.01%,100% {transform: rotate(360deg)}
-  }
-  @keyframes l27-1 {
-     0%      {transform: rotate(calc(var(--s,1)*120deg)) translate(0)}
-     30%,70% {transform: rotate(calc(var(--s,1)*120deg)) translate(calc(var(--s,1)*-5px),10px)}
-     100%    {transform: rotate(calc(var(--s,1)*120deg)) translate(0)}
-  }
+}
+
+.loader:after {
+    --s: -1;
+}
+
+@keyframes l27-0 {
+
+    0%,
+    30% {
+        transform: rotate(0)
+    }
+
+    70% {
+        transform: rotate(120deg)
+    }
+
+    70.01%,
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes l27-1 {
+    0% {
+        transform: rotate(calc(var(--s, 1)*120deg)) translate(0)
+    }
+
+    30%,
+    70% {
+        transform: rotate(calc(var(--s, 1)*120deg)) translate(calc(var(--s, 1)*-5px), 10px)
+    }
+
+    100% {
+        transform: rotate(calc(var(--s, 1)*120deg)) translate(0)
+    }
+}
 
 
 
@@ -129,7 +153,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    background:var(--main-background);
+    background: var(--main-background);
 }
 
 .main {
@@ -140,7 +164,7 @@ body {
 .page-1 {
     height: 100vh;
     width: 100%;
-    background:var(--main-background);
+    background: var(--main-background);
     padding-top: 0.01vh;
     /* display: none; */
 }
@@ -342,7 +366,7 @@ nav .ri-menu-3-line {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    /* object-position: top; */
     border-radius: 10px;
 }
 
@@ -366,7 +390,7 @@ nav .ri-menu-3-line {
 .page-2 {
     height: 170vh;
     width: 100%;
-    background:var(--main-background);
+    background: var(--main-background);
     overflow: hidden;
 }
 
@@ -406,25 +430,28 @@ nav .ri-menu-3-line {
     height: 95%;
     width: 20%;
 }
-.item-section-part .item .product-image{
+
+.item-section-part .item .product-image {
     height: 80%;
     width: 100%;
 }
-.item-section-part .item .product-image img{
+
+.item-section-part .item .product-image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.item-section-part .item h5{
+.item-section-part .item h5 {
     font-size: 1vw;
     color: rgb(146, 146, 146);
     font-weight: 400;
     padding: 0 0.9vw;
     margin: 10px 0 0 0;
 }
-.item-section-part .item h6{
+
+.item-section-part .item h6 {
     font-size: 1vw;
     color: rgb(46, 46, 46);
     font-weight: 700;
@@ -589,4 +616,161 @@ nav .ri-menu-3-line {
 
 
 
+}
+
+footer .developers-details {
+    height: 100%;
+    width: 100%;
+    background-color: #C38100;
+}
+
+.developers-names {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.linkedin-profiles a {
+    text-decoration: none;
+    color: black;
+    font-size: 1vw;
+    margin: 0.3vw;
+
+
+}
+
+.developed-by {
+    font-size: 2vw;
+    margin-bottom: 0.5vw;
+    margin-top: 0.5vw;
+
+}
+
+.developers-accounts {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 0.7vw;
+    /* margin-left: 5vw;
+    margin-right: 5vw; */
+    margin-bottom: 0.7vw;
+}
+
+.developers-gmails {
+    display: flex;
+    flex-direction: column;
+}
+
+.developers-github {
+    display: flex;
+    flex-direction: column;
+}
+
+.developers-twitter {
+    display: flex;
+    flex-direction: column;
+}
+
+.developers-gmails .gmail {
+    font-size: 1vw;
+    text-align: center;
+}
+
+.developers-github .github {
+    font-size: 1vw;
+    text-align: center;
+}
+
+.developers-twitter .twitter {
+    font-size: 1vw;
+    text-align: center;
+}
+
+.developers-gmails a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9vw;
+}
+
+.developers-github a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9vw;
+}
+
+.developers-twitter a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9vw;
+}
+
+
+
+.copyright-conditions{
+    /* background: #131A22; */
+    height: 76px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.pages{
+    text-align: center;
+    padding-top: 25px;
+}
+.pages a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.7vw;
+   
+}
+.pages a:hover{
+    text-decoration: underline;
+}
+.copyright{
+    color: black;
+    font-size: 0.7vw;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+
+.cart-container{
+    height: 500px;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 1vw;
+    background: rgba(84, 84, 84, 0.832);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    z-index: 999;
+    right: 0;
+}
+
+/* .cart-options{
+    display: flex;
+    flex-direction: column;
+   align-items: flex-end;
+} */
+.remove-items-from-cart{
+    height: 3vw;
+    width: 7vw;
+    border-radius: 2vw;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(83, 189, 250);
+    color: whitesmoke;
+    border-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.cart-container h3{
+    color: white;
+    text-align: center;
 }

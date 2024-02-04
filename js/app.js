@@ -56,3 +56,4 @@ async function addingItems(parentElement) {
 
   addingItems(bottom_Product_Shelf);
   addingItems(top_Product_Shelf);
+
