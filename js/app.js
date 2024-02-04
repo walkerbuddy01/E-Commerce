@@ -1,3 +1,43 @@
+const cart = document.querySelector(".cart");
+
+const cart_container = document.querySelector(".cart-container")
+
+const cart_close_button = document.querySelector(".ri-close-line");
+
+const cart_open_button = document.querySelector(".cart-section")
+
+
+cart_open_button.addEventListener('click',()=>{
+  cart.style.display = "flex";
+  setTimeout(()=>{
+    cart_container.style.transform = 'translateX(0%)'
+  },100)
+
+  
+  
+})
+
+
+cart_close_button.addEventListener('click',()=>{
+  cart_container.style.transform = 'translateX(100%)'
+  setTimeout(()=>{
+    cart.style.display = "none";
+  },500)
+})
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 // <div class="item-1 item">
 //    <div class="product-image">
 //     <img src="./media/hero section image.png" alt="product-image">
