@@ -362,6 +362,10 @@ nav .search-section i {
     text-align: center;
     text-transform: uppercase;
 }
+.sign-up_log-in button a{
+    text-decoration: none;
+    color: whitesmoke;
+}
 
 .cart-section {
     height: 80%;
@@ -927,3 +931,4 @@ footer .developers-details {
     text-align: center;
     padding-top: 5px;
 }
+
