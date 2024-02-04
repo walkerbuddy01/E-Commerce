@@ -507,7 +507,7 @@ nav .ri-menu-3-line {
 
 
 .page-2 {
-    height: 170vh;
+    height: 100vh;
     width: 100%;
     background: var(--main-background);
     overflow: hidden;
@@ -536,31 +536,64 @@ nav .ri-menu-3-line {
 
 .item-section-part {
     /* background: blue; */
-    height: 50%;
+    height: 45%;
     width: 100%;
-    display: flex;
-    gap: 10px;
+    /* display: flex; */
+    /* gap: 10px; */
+    white-space: nowrap;
     padding: 0 1vw;
-    align-items: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    /* align-items: center; */
 }
+
+/* width */
+.page-2::-webkit-scrollbar {
+    width: 0;
+}
+
+
 
 .item-section-part .item {
     /* background: grey; */
+    scroll-snap-align: start;
     height: 95%;
     width: 20%;
+    display: inline-block;
+    margin: 0 5px;
+    overflow: hidden;
 }
 
 .item-section-part .item .product-image {
     height: 80%;
     width: 100%;
+    background: white;
+
+    position: relative;
 }
 
 .item-section-part .item .product-image img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    mix-blend-mode: multiply;
     border-radius: 10px;
 }
+.item-section-part .item .product-image i{
+    position: absolute;
+    height: 25px;
+    width: 60px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 20px;
+    top: 10px;
+    color: white;
+    background: black;
+}
+
+
 
 .item-section-part .item h5 {
     font-size: 1vw;
