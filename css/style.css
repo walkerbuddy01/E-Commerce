@@ -626,12 +626,12 @@ nav .ri-menu-3-line {
 }
 
 .product-content button:hover{
-    background: rgb(0, 209, 0);
-    box-shadow: 0px 0px 20px rgb(2, 255, 2);
-    border: 1px solid rgb(77, 255, 77);
+    background: rgb(18, 188, 226);
+    box-shadow: 0px 0px 20px rgb(0, 202, 247);
+    border: 1px solid rgb(78, 215, 245);
 }
 .product-content button:active{
-    background: rgb(132, 255, 132);
+    background: rgb(25, 160, 191);
     color: black;
 }
 
