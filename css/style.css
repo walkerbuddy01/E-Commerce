@@ -362,7 +362,8 @@ nav .search-section i {
     text-align: center;
     text-transform: uppercase;
 }
-.sign-up_log-in button a{
+
+.sign-up_log-in button a {
     text-decoration: none;
     color: whitesmoke;
 }
@@ -563,7 +564,7 @@ nav .ri-menu-3-line {
     overflow: hidden;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 10px 10px ;
+    padding: 10px 10px;
 }
 
 .item-section-part .item .product-image {
@@ -585,7 +586,7 @@ nav .ri-menu-3-line {
     border-radius: 10px;
 }
 
-.product-content{
+.product-content {
     height: 60%;
     width: 100%;
     text-align: left;
@@ -594,17 +595,19 @@ nav .ri-menu-3-line {
     flex-direction: column;
     justify-content: space-around;
 }
-.product-content>h4:nth-child(1){
+
+.product-content>h4:nth-child(1) {
     font-size: 25px;
     overflow: hidden;
 }
-.product-content h4{
+
+.product-content h4 {
     font-size: 16px;
     text-align: left;
     overflow: hidden;
 }
 
-.product-content p{
+.product-content p {
     font-size: 15px;
     height: 40%;
     width: 100%;
@@ -615,7 +618,7 @@ nav .ri-menu-3-line {
     border-radius: 5px;
 }
 
-.product-content button{
+.product-content button {
     background: black;
     color: white;
     font-weight: 600;
@@ -625,12 +628,13 @@ nav .ri-menu-3-line {
     transition: all 0.15s linear;
 }
 
-.product-content button:hover{
+.product-content button:hover {
     background: rgb(18, 188, 226);
     box-shadow: 0px 0px 20px rgb(0, 202, 247);
     border: 1px solid rgb(78, 215, 245);
 }
-.product-content button:active{
+
+.product-content button:active {
     background: rgb(25, 160, 191);
     color: black;
 }
@@ -681,7 +685,8 @@ nav .ri-menu-3-line {
         height: 45%;
         width: 15px;
     }
-    .page-2{
+
+    .page-2 {
         margin: 1vw 0 0 0;
     }
 
@@ -793,9 +798,11 @@ nav .ri-menu-3-line {
     .hero-section-right-1 {
         height: 35%;
     }
-    .page-2{
+
+    .page-2 {
         margin: 2vw 0 0 0;
     }
+
     .page-2 h3 {
         font-size: 30px;
     }
@@ -931,7 +938,7 @@ footer .developers-details {
     padding-top: 5px;
 }
 
-.product{
+.product {
     width: 100%;
     height: 30%;
     background: rgba(212, 212, 212, 0.389);
@@ -942,7 +949,7 @@ footer .developers-details {
     margin: 5px 0;
 }
 
-.cart-product-image{
+.cart-product-image {
     height: 100%;
     width: 30%;
     display: flex;
@@ -950,16 +957,17 @@ footer .developers-details {
     justify-content: center;
     border-radius: 5px;
     background: white;
-    
+
 }
-.cart-product-image img{
+
+.cart-product-image img {
     height: 90%;
     width: 100%;
     object-fit: contain;
     mix-blend-mode: multiply;
 }
 
-.cart-product-content{
+.cart-product-content {
     height: 100%;
     width: 60%;
     display: flex;
@@ -967,4 +975,109 @@ footer .developers-details {
     gap: 5px;
     background: rgb(25, 255, 175);
     padding: 5px 10px;
+}
+
+
+
+.menu-bar-1 {
+    height: 100%;
+    width: 350px;
+    border: 2px solid black;
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(119, 119, 119, 0.572);
+    backdrop-filter: blur(8px);
+
+}
+.menu-bar-1 h2{
+    color: black;
+   text-align: center;
+}
+
+
+
+
+.menu {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+}
+
+.menu a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: rgb(213, 122, 122);
+    min-width: 160px;
+    z-index: 1;
+    margin: 40px 70px;
+}
+
+.submenu a {
+    float: none;
+    color: white;
+    padding: 12px 70px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    
+}
+
+/* .submenu a:hover {
+    background-color: #555;
+} */
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.menu-log-in{
+    height: 7%;
+    width: 50%;
+    top: 20vw;
+    
+   
+    
+    
+}
+.menu-log-in button{
+    height: 60%;
+    width: 80%;
+    border-radius: 4vw;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(83, 189, 250);
+    color: whitesmoke;
+    border-style: none;
+    text-transform: uppercase;
+  
+
+   
+    
+   
+  
+}
+
+
+
+.menu-log-in button a {
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: center;
 }
