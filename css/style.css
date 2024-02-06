@@ -997,8 +997,8 @@ footer .developers-details {
     height: 100%;
     width: 350px;
     background: white;
-    transform:translateX(-100%)
     transition: all 0.5s linear;
+    transform: translateX(-100%);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
