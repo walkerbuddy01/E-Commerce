@@ -1,4 +1,4 @@
-:root {
+ji:root {
     --main-background: rgb(206, 206, 206);
 }
 
@@ -989,7 +989,7 @@ footer .developers-details {
     position: fixed;
     left: 0;
     z-index: 999;
-    display: flex;
+    display: none;
 
 }
 
@@ -997,6 +997,7 @@ footer .developers-details {
     height: 100%;
     width: 350px;
     background: white;
+    transform:translateX(-100%)
     transition: all 0.5s linear;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
