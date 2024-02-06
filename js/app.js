@@ -1,6 +1,7 @@
 const cart = document.querySelector(".cart");
 const cart_container = document.querySelector(".cart-container");
-const cart_close_button = document.querySelector(".ri-close-line");
+const cart_close_button = document.querySelector(".cart-close");
+const menu_close_button = document.querySelector(".menu-close");
 const cart_open_button = document.querySelector(".cart-section");
 const menu_open_button = document.querySelector("nav .ri-menu-3-line")
 const menu_section = document.querySelector(".menu-bar-1");
@@ -31,7 +32,7 @@ setTimeout(()=>{
 
   
 })
-cart_close_button.addEventListener('click',()=>{
+menu_close_button.addEventListener('click',()=>{
   menu_section.style.transform = `translateX(-100%)`
   setTimeout(()=>{
     menu_container.style.display = `none`;
