@@ -412,8 +412,14 @@ nav .search-section i {
 }
 
 nav .ri-menu-3-line {
+    border-radius: 50%;
+    padding: 2vw;
     font-size: 1.8vw;
     display: none;
+}
+
+nav .ri-menu-3-line:active{
+    background: rgba(0, 0, 0, 0.181);
 }
 
 .navbar-2 {
@@ -977,82 +983,95 @@ footer .developers-details {
     padding: 5px 10px;
 }
 
+.menu-wrapper{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    display: flex;
 
+}
 
 .menu-bar-1 {
     height: 100%;
     width: 350px;
-    border: 2px solid black;
-    position: fixed;
-    left: 0;
-    z-index: 999;
-    background-color: rgba(119, 119, 119, 0.572);
-    backdrop-filter: blur(8px);
-
+    background: white;
+    transition: all 0.5s linear;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .menu-bar-1 h2{
     color: black;
    text-align: center;
+  
 }
 
 
 
 
 .menu {
-    background-color: #333;
+    height: 80%;
+    /* background-color: #333; */
     display: flex;
     flex-direction: column;
-    margin-top: 2vw;
+    margin: 10px 0 0 0;
+    gap: 10px;
+    padding: 0 10px;
 }
 
 .menu a {
     float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-.menu a:hover {
-    background-color: #555;
+
+.menu-item{
+    height: 10%;
+    width: 100%;
+    /* background: red; */
+    border-bottom: 1px solid black;
 }
 
 .submenu {
     display: none;
     position: absolute;
     background-color: rgb(213, 122, 122);
+    border-radius: 10px;
     min-width: 160px;
     z-index: 1;
     margin: 40px 70px;
+    transition: all 0.65s linear;
 }
 
 .submenu a {
     float: none;
     color: white;
     padding: 12px 70px;
-    display: block;
+    display: flex;
     text-align: left;
     text-decoration: none;
+    border-radius: 10px;
     
+    transition: all 0.15s linear;
 }
 
-/* .submenu a:hover {
+.submenu a:hover {
     background-color: #555;
-} */
+}
 
 .menu-item:hover .submenu {
     display: block;
 }
 
 .menu-log-in{
-    height: 7%;
-    width: 50%;
-    top: 20vw;
-    
-   
-    
-    
+    height: 60px;
+    width: 110px;
+    margin: 0 0 0 10px;
 }
 .menu-log-in button{
     height: 60%;
@@ -1067,17 +1086,28 @@ footer .developers-details {
     border-style: none;
     text-transform: uppercase;
   
-
-   
-    
-   
-  
 }
-
-
 
 .menu-log-in button a {
     text-decoration: none;
     color: whitesmoke;
     text-align: center;
+}
+.menu-content{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-content i{
+    padding: 2.5px;
+    border-radius: 50%;
+    font-size: 30px;
+    transition: all 0.15s linear;
+}
+
+.menu-content i:hover{
+    background: #000;
+    color: white;
 }

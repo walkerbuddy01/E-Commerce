@@ -2,6 +2,9 @@ const cart = document.querySelector(".cart");
 const cart_container = document.querySelector(".cart-container");
 const cart_close_button = document.querySelector(".ri-close-line");
 const cart_open_button = document.querySelector(".cart-section");
+const menu_open_button = document.querySelector("nav .ri-menu-3-line")
+const menu_section = document.querySelector(".menu-bar-1");
+const menu_container = document.querySelector(".menu-wrapper")
 
 cart_open_button.addEventListener("click", () => {
   cart.style.display = "flex";
@@ -17,24 +20,48 @@ cart_close_button.addEventListener("click", () => {
   }, 500);
 });
 
-{/* <div class="item-1 item">
-                        <div class="product-image">
-                            <i class="ri-shopping-bag-line"> Buy</i>
-                         <img src="./media/hero section image.png" alt="product-image">
-                        </div>
-                          <h5 class="product-name">Nike shoes</h5>
+
+
+menu_open_button.addEventListener('click',()=>{
+  menu_container.style.display = `flex`;
+setTimeout(()=>{
+
+  menu_section.style.transform = `translateX(0)`
+},100)
+
+  
+})
+cart_close_button.addEventListener('click',()=>{
+  menu_section.style.transform = `translateX(-100%)`
+  setTimeout(()=>{
+    menu_container.style.display = `none`;
+  },600)
+})
+
+
+
+{
+  /* <div class="item-1 item">
+                      <div class="product-image">
+                          <i class="ri-shopping-bag-line"> Buy</i>
+                       <img src="./media/hero section image.png" alt="product-image">
+                      </div>
+                        <h5 class="product-name">Nike shoes</h5>
                          <h6 class="product-price">$100</h5>
-                      </div> */}
- 
+                      </div> */
+}
+
 const top_Product_Shelf = document.querySelector(".item-section-top");
-const cart_product_section = document.querySelector(".products-collection")
+const cart_product_section = document.querySelector(".products-collection");
+const cartIcon = document.querySelector(".cart-section i");
 const loader = document.createElement("div");
+let product_counter = 0;
 loader.setAttribute("class", "loader");
-// Add to cart function 
-const add_in_cart = (item)=>{
+// Add to cart function
+const add_in_cart = (item) => {
   const product = document.createElement("div");
   product.setAttribute("class", "product");
-  product.innerHTML=`<div class="cart-product-image">
+  product.innerHTML = `<div class="cart-product-image">
   <img src="${item.image}" alt="">
 </div>
 <div class="cart-product-content">
@@ -43,10 +70,11 @@ const add_in_cart = (item)=>{
   <div class="counter">
       
   </div>
-</div>`
-cart_product_section.appendChild(product);
-}
-
+</div>`;
+  cart_product_section.appendChild(product);
+  product_counter++;
+  cartIcon.style.setProperty("--after-content", `${product_counter}`);
+};
 
 // GET product
 
@@ -69,7 +97,7 @@ async function addingItems(parentElement) {
       const image = item.image;
       const desc = item.description;
       const Category = item.category;
-      
+
       const DomElement = document.createElement("div");
       DomElement.setAttribute("class", "item-1 item");
 
@@ -89,23 +117,13 @@ async function addingItems(parentElement) {
             `;
       loader.style.display = "none";
       parentElement.appendChild(DomElement);
-      DomElement.querySelector(".add_to_cart").addEventListener("click",()=>{
+      DomElement.querySelector(".add_to_cart").addEventListener("click", () => {
         add_in_cart(item);
-      })
+      });
     }
   }, 1200);
 }
 
 addingItems(top_Product_Shelf);
 
- 
-
-setTimeout(select,1500)
-
-
-
-
-
-
-
-
+setTimeout(select, 1500);
