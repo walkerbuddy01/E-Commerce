@@ -79,7 +79,7 @@ const add_in_cart = (item) => {
       count--;
       product_count.innerText = count;
       product_count.innerText = count;
-      price.innerText = count * item.price;
+      price.innerText = (count * item.price).toFixed(2);
     }
   });
 
@@ -88,7 +88,7 @@ const add_in_cart = (item) => {
     let price = product.querySelector(".product-price");
     count++;
     product_count.innerText = count;
-    price.innerText = count * item.price;
+    price.innerText = (count * item.price).toFixed(2);
   });
 
   product.querySelector(" h4").addEventListener('click',()=>{
