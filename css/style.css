@@ -1,5 +1,5 @@
-ji:root {
-    --main-background: rgb(206, 206, 206);
+:root {
+    --main-background: rgb(197, 132, 58);
 }
 
 @font-face {
@@ -144,7 +144,7 @@ ji:root {
     width: 100%;
     background: transparent;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
     top: 0;
     left: 0;
     display: flex;
@@ -192,7 +192,7 @@ ji:root {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.25s linear;
+    transition: all 0.25s linear;
 }
 
 .cart-container .cart-head .cart-icon i:nth-last-child(1):hover {
@@ -214,6 +214,36 @@ ji:root {
     height: 80%;
     width: 100%;
     overflow: scroll;
+}
+
+.cart-product-content>h4{
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+    text-decoration: underline dotted ;
+    cursor: pointer;
+}
+
+.counter{
+    background: rgba(193, 193, 193, 0.361);
+    display:flex;
+    justify-content: center;
+    height:25px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.counter i{
+    font-size: 20px;
+    padding: 1px 5px;
+}
+.show-count{
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    padding: 2px 0;
+    border-right: 1px solid rgb(68, 68, 68);
+    border-left: 1px solid rgb(68, 68, 68);
 }
 
 .cart-options {
@@ -286,7 +316,6 @@ body {
 nav {
     display: flex;
     /* background: rgba(255, 0, 0, 0.35); */
-    backdrop-filter: blur(8px);
     height: 60px;
     width: 100%;
     margin-top: 1vh;
@@ -419,7 +448,7 @@ nav .ri-menu-3-line {
     display: none;
 }
 
-nav .ri-menu-3-line:active{
+nav .ri-menu-3-line:active {
     background: rgba(0, 0, 0, 0.181);
 }
 
@@ -572,6 +601,7 @@ nav .ri-menu-3-line:active{
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px 10px;
+    background: rgb(206, 206, 206);
 }
 
 .item-section-part .item .product-image {
@@ -657,6 +687,11 @@ nav .ri-menu-3-line:active{
 
 
 @media (max-device-width:900px) {
+    .page-1 {
+        background: var(--main-background);
+
+    }
+
     nav h1 {
         width: 15%;
     }
@@ -694,6 +729,7 @@ nav .ri-menu-3-line:active{
     }
 
     .page-2 {
+        background: var(--main-background);
         margin: 1vw 0 0 0;
     }
 
@@ -723,7 +759,8 @@ nav .ri-menu-3-line:active{
     .page-1 {
         height: 200vh;
         width: 100vw;
-        background: rgb(206, 206, 206);
+        background: var(--main-background);
+
         padding-top: 0.01vh;
     }
 
@@ -807,6 +844,8 @@ nav .ri-menu-3-line:active{
     }
 
     .page-2 {
+        background: var(--main-background);
+
         margin: 2vw 0 0 0;
     }
 
@@ -984,12 +1023,12 @@ footer .developers-details {
     padding: 5px 10px;
 }
 
-.menu-wrapper{
+.menu-wrapper {
     height: 100%;
     width: 100%;
     position: fixed;
     left: 0;
-    z-index: 999;
+    z-index: 9999;
     display: none;
 
 }
@@ -1003,10 +1042,11 @@ footer .developers-details {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.menu-bar-1 h2{
+
+.menu-bar-1 h2 {
     color: black;
-   text-align: center;
-  
+    text-align: center;
+
 }
 
 
@@ -1032,7 +1072,7 @@ footer .developers-details {
 }
 
 
-.menu-item{
+.menu-item {
     height: 10%;
     width: 100%;
     /* background: red; */
@@ -1059,7 +1099,7 @@ footer .developers-details {
     text-align: left;
     text-decoration: none;
     border-radius: 10px;
-    
+
     transition: all 0.15s linear;
 }
 
@@ -1071,12 +1111,13 @@ footer .developers-details {
     display: block;
 }
 
-.menu-log-in{
+.menu-log-in {
     height: 60px;
     width: 110px;
     margin: 0 0 0 10px;
 }
-.menu-log-in button{
+
+.menu-log-in button {
     height: 60%;
     width: 80%;
     border-radius: 4vw;
@@ -1088,7 +1129,7 @@ footer .developers-details {
     color: whitesmoke;
     border-style: none;
     text-transform: uppercase;
-  
+
 }
 
 .menu-log-in button a {
@@ -1096,21 +1137,22 @@ footer .developers-details {
     color: whitesmoke;
     text-align: center;
 }
-.menu-content{
+
+.menu-content {
     height: 10%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.menu-content i{
+.menu-content i {
     padding: 2.5px;
     border-radius: 50%;
     font-size: 30px;
     transition: all 0.15s linear;
 }
 
-.menu-content i:hover{
+.menu-content i:hover {
     background: #000;
     color: white;
 }
