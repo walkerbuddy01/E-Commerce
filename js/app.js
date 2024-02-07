@@ -3,9 +3,9 @@ const cart_container = document.querySelector(".cart-container");
 const cart_close_button = document.querySelector(".cart-close");
 const menu_close_button = document.querySelector(".menu-close");
 const cart_open_button = document.querySelector(".cart-section");
-const menu_open_button = document.querySelector("nav .ri-menu-3-line")
+const menu_open_button = document.querySelector("nav .ri-menu-3-line");
 const menu_section = document.querySelector(".menu-bar-1");
-const menu_container = document.querySelector(".menu-wrapper")
+const menu_container = document.querySelector(".menu-wrapper");
 
 cart_open_button.addEventListener("click", () => {
   cart.style.display = "flex";
@@ -21,25 +21,18 @@ cart_close_button.addEventListener("click", () => {
   }, 500);
 });
 
-
-
-menu_open_button.addEventListener('click',()=>{
+menu_open_button.addEventListener("click", () => {
   menu_container.style.display = `flex`;
-setTimeout(()=>{
-
-  menu_section.style.transform = `translateX(0)`
-},100)
-
-  
-})
-menu_close_button.addEventListener('click',()=>{
-  menu_section.style.transform = `translateX(-100%)`
-  setTimeout(()=>{
+  setTimeout(() => {
+    menu_section.style.transform = `translateX(0)`;
+  }, 100);
+});
+menu_close_button.addEventListener("click", () => {
+  menu_section.style.transform = `translateX(-100%)`;
+  setTimeout(() => {
     menu_container.style.display = `none`;
-  },600)
-})
-
-
+  }, 600);
+});
 
 {
   /* <div class="item-1 item">
@@ -60,7 +53,7 @@ let product_counter = 0;
 loader.setAttribute("class", "loader");
 // Add to cart function
 const add_in_cart = (item) => {
-  const product = document.createElement("div");
+ const product = document.createElement("div");
   product.setAttribute("class", "product");
   product.innerHTML = `<div class="cart-product-image">
   <img src="${item.image}" alt="">
@@ -69,12 +62,38 @@ const add_in_cart = (item) => {
   <h5 class="product-name">${item.title}</h5>
   <h5 class="product-price">$${item.price}</h5>
   <div class="counter">
-      
+  <i class="ri-subtract-line"></i>
+  <div class="show-count">1</div>
+  <i class="ri-add-line"></i>
   </div>
+  <h4>Remove</h4>
 </div>`;
   cart_product_section.appendChild(product);
-  product_counter++;
-  cartIcon.style.setProperty("--after-content", `${product_counter}`);
+  let product_count = product.querySelector(".show-count");
+  product.querySelector(".ri-subtract-line").addEventListener("click", () => {
+    let count = Number(product_count.innerText);
+    if (count == 1) {
+      product.remove();
+    } else if (count > 1) {
+      let price = product.querySelector(".product-price");
+      count--;
+      product_count.innerText = count;
+      product_count.innerText = count;
+      price.innerText = count * item.price;
+    }
+  });
+
+  product.querySelector(".ri-add-line").addEventListener("click", () => {
+    let count = Number(product_count.innerText);
+    let price = product.querySelector(".product-price");
+    count++;
+    product_count.innerText = count;
+    price.innerText = count * item.price;
+  });
+
+  product.querySelector(" h4").addEventListener('click',()=>{
+    product.remove();
+  })
 };
 
 // GET product
@@ -127,4 +146,4 @@ async function addingItems(parentElement) {
 
 addingItems(top_Product_Shelf);
 
-setTimeout(select, 1500);
+// setTimeout(select, 1500);
