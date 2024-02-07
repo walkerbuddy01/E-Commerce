@@ -1024,7 +1024,6 @@ footer .developers-details {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background: rgb(21, 209, 219);
     padding: 5px 10px;
 }
 

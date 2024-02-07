@@ -53,7 +53,7 @@ let product_counter = 0;
 loader.setAttribute("class", "loader");
 // Add to cart function
 const add_in_cart = (item) => {
- const product = document.createElement("div");
+  const product = document.createElement("div");
   product.setAttribute("class", "product");
   product.innerHTML = `<div class="cart-product-image">
   <img src="${item.image}" alt="">
@@ -91,9 +91,9 @@ const add_in_cart = (item) => {
     price.innerText = (count * item.price).toFixed(2);
   });
 
-  product.querySelector(" h4").addEventListener('click',()=>{
+  product.querySelector(" h4").addEventListener("click", () => {
     product.remove();
-  })
+  });
 };
 
 // GET product
