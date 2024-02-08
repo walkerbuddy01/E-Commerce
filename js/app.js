@@ -82,7 +82,7 @@ const add_in_cart = (item) => {
       count--;
       product_count.innerText = count;
       product_count.innerText = count;
-      price.innerText = (count * item.price).toFixed(2);
+      price.innerText = count * item.price;
     }
   });
 
@@ -91,16 +91,12 @@ const add_in_cart = (item) => {
     let price = product.querySelector(".product-price");
     count++;
     product_count.innerText = count;
-    price.innerText = (count * item.price).toFixed(2);
+    price.innerText = count * item.price;
   });
 
-<<<<<<< HEAD
   product.querySelector(" h4").addEventListener('click', () => {
-=======
-  product.querySelector(" h4").addEventListener("click", () => {
->>>>>>> 7c84a3a0dead6ce728c25eccb070027c04839fde
     product.remove();
-  });
+  })
 };
 
 // GET product
